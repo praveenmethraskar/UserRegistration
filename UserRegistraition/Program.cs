@@ -10,6 +10,7 @@ namespace UserRegistration
         {
             User user = new User();
             user.ValidFirstName();
+            user.ValidLastName();
         }
     }
 }
