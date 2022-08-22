@@ -82,5 +82,29 @@ namespace UserRegistraition
 
         }
 
+        public void ValidPhone()
+        {
+            Console.WriteLine("enter Phone Number");
+            string data = Console.ReadLine();
+            string namepattern = "^[0-9]{2,4}[ ]{1}[0-9]{10}$";
+
+            Regex regex = new Regex(namepattern);
+
+            if (regex.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Enter email is valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Entered email is not valid");
+                Console.ResetColor();
+            }
+            Console.WriteLine(data);
+
+        }
+
     }
 }

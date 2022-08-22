@@ -11,7 +11,8 @@ namespace UserRegistration
             User user = new User();
             //user.ValidFirstName();
             //user.ValidLastName();
-            user.ValidEmail();
+            //user.ValidEmail();
+            user.ValidPhone();
         }
     }
 }
