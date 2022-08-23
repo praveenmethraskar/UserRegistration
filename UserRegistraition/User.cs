@@ -86,7 +86,7 @@ namespace UserRegistraition
         {
             Console.WriteLine("enter Phone Number");
             string data = Console.ReadLine();
-            string namepattern = "^[0-9]{2,4}[ ]{1}[0-9]{10}$";
+            string namepattern = "^[0-9]{2,4}[ ]{1}[6-9]{1}[0-9]{9}$";
 
             Regex regex = new Regex(namepattern);
 
@@ -102,9 +102,33 @@ namespace UserRegistraition
                 Console.WriteLine("Entered email is not valid");
                 Console.ResetColor();
             }
-            Console.WriteLine(data);
-
+            Console.WriteLine(data); 
         }
+
+
+        public void ValidPassword()
+        {
+            Console.WriteLine("enter Password");
+            string data = Console.ReadLine();
+            string namepattern = "^[a-zA-Z]{8,}$";
+
+            Regex regex = new Regex(namepattern);
+
+            if (regex.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Entered Password is valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Entered Password is not valid");
+                Console.ResetColor();
+            }
+            Console.WriteLine(data);
+        }
+
 
     }
 }
