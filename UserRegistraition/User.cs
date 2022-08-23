@@ -110,7 +110,7 @@ namespace UserRegistraition
         {
             Console.WriteLine("enter Password");
             string data = Console.ReadLine();
-            string namepattern = "^[a-zA-Z]{8,}$";
+            string namepattern = "^[a-zA-Z0-9]{8,}$";
 
             Regex regex = new Regex(namepattern);
 
