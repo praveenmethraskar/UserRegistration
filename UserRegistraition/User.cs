@@ -62,8 +62,8 @@ namespace UserRegistraition
         {
             Console.WriteLine("enter mail id");
             string data = Console.ReadLine();
-            string namepattern = "^[a-zA-Z]+[.+-]+[0-9a-zA-Z]+[@][a-zA-Z]+[.]+[a-zA-Z]{2,3}([.][a-zA-Z{2,3}([.][a-zA-Z]{2,3}){0,1}$$";
-
+            //string namepattern = "^[a-zA-Z]+[.+-]+[0-9a-zA-Z]+[@][a-zA-Z]+[.]+[a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
+            string namepattern = "^[a-z]{1,}([-.+]{1}){0,1}([0-9]{1,}){0,1}[@]{1}[a-z0-9]{1,}[.][a-zA-Z]{2,3}([.]{1}[a-z]{2,3}){0,1}$";
             Regex regex = new Regex(namepattern);
 
             if (regex.IsMatch(data))
